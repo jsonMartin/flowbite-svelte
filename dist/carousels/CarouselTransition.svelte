@@ -32,7 +32,7 @@ let slideCls = twMerge(slideClass, $$props.classSlide);
 export let transitionDivClass = 'h-full w-full bg-green-500';
 let transitionDivCls = twMerge(transitionDivClass, $$props.classTransitionDiv);
 // Img
-export let imgClass = 'bg-yellow-500';
+export let imgClass = 'bg-yellow-500 w-full h-full object-contain';
 let imgCls = twMerge(imgClass, $$props.classImg);
 // have a custom transition function that returns the desired transition
 const multiple = (node, params) => {
