@@ -62,7 +62,12 @@ if (loop) {
 
 <div {id} class="relative">
   <div class={divCls}>
-    <Slide image={image.imgurl} altTag={image.name} attr={image.attribution} slideClass={slideCls} />
+    <Slide
+      image={image.imgurl}
+      altTag={image.name}
+      attr={image.attribution}
+      slideClass={slideCls}
+      imgClass={imgCls} />
   </div>
   {#if showIndicators}
     <!-- Slider indicators -->

@@ -36,6 +36,7 @@ let imgCls = twMerge(imgClass, $$props.classImg);
 // Thumbnail
 export let thumbClass = 'opacity-40';
 let thumbCls = twMerge(thumbClass, $$props.classThumb);
+// Thumbnail Container
 export let thumbDivClass = 'flex flex-row justify-center bg-gray-100';
 let thumbDivCls = twMerge(thumbDivClass, $$props.classThumbDiv);
 // have a custom transition function that returns the desired transition
