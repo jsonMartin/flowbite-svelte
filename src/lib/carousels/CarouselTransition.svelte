@@ -33,7 +33,7 @@
   export let slideClass: string = 'bg-purple-500';
   let slideCls: string = twMerge(slideClass, $$props.classSlide);
   // Transition Div
-  export let transitionDivClass: string = 'bg-green-500';
+  export let transitionDivClass: string = 'h-full w-full bg-green-500';
   let transitionDivCls: string = twMerge(transitionDivClass, $$props.classTransitionDiv);
   // Img
   export let imgClass: string = 'bg-yellow-500';
