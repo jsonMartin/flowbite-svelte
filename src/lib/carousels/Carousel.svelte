@@ -29,6 +29,9 @@
   // Slide
   export let slideClass: string = 'bg-purple-500';
   let slideCls: string = twMerge(slideClass, $$props.classSlide);
+  // Img
+  export let imgClass: string = 'bg-yellow-500';
+  let imgCls: string = twMerge(imgClass, $$props.classImg);
 
   let imageShowingIndex: number = 0;
   $: image = images[imageShowingIndex];
