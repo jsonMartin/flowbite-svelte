@@ -29,7 +29,7 @@ let indicatorCls = twMerge(indicatorClass, $$props.classIndicator);
 export let slideClass = 'bg-purple-500';
 let slideCls = twMerge(slideClass, $$props.classSlide);
 // Transition Div
-export let transitionDivClass = 'bg-green-500';
+export let transitionDivClass = 'h-full w-full bg-green-500';
 let transitionDivCls = twMerge(transitionDivClass, $$props.classTransitionDiv);
 // Img
 export let imgClass = 'bg-yellow-500';
