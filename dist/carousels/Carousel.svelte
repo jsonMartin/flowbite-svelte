@@ -31,6 +31,9 @@ let imgCls = twMerge(imgClass, $$props.classImg);
 // Thumbnail
 export let thumbClass = 'opacity-40';
 let thumbCls = twMerge(thumbClass, $$props.classThumb);
+// Thumbnail Container
+export let thumbDivClass = 'flex flex-row justify-center bg-gray-100';
+let thumbDivCls = twMerge(thumbDivClass, $$props.classThumbDiv);
 let imageShowingIndex = 0;
 $: image = images[imageShowingIndex];
 const nextSlide = () => {
@@ -131,7 +134,7 @@ if (loop) {
 {/if}
 
 {#if showThumbs}
-  <div class="flex flex-row justify-center bg-gray-100">
+  <div class={thumbDivCls}>
     {#each images as { id, imgurl, name, attribution }}
       <Thumbnail
         thumbClass={thumbCls}

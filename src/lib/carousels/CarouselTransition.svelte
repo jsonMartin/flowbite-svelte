@@ -40,6 +40,9 @@
   // Thumbnail
   export let thumbClass: string = 'opacity-40';
   let thumbCls: string = twMerge(thumbClass, $$props.classThumb);
+  // Thumbnail Container
+  export let thumbDivClass = 'flex flex-row justify-center bg-gray-100';
+  let thumbDivCls = twMerge(thumbDivClass, $$props.classThumbDiv);
 
   // have a custom transition function that returns the desired transition
   const multiple = (node: HTMLElement, params: any) => {
@@ -169,7 +172,7 @@
 {/if}
 
 {#if showThumbs}
-  <div class="flex flex-row justify-center bg-gray-100">
+  <div class={thumbDivCls}>
     {#each images as { id, imgurl, name, attribution }}
       <Thumbnail
         thumbClass={thumbCls}

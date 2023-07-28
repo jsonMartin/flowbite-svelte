@@ -20,6 +20,7 @@ declare const __propDef: {
         transitionDivClass?: string | undefined;
         imgClass?: string | undefined;
         thumbClass?: string | undefined;
+        thumbDivClass?: string | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;

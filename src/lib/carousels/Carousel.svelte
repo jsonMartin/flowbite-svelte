@@ -34,6 +34,9 @@
   // Thumbnail
   export let thumbClass: string = 'opacity-40';
   let thumbCls: string = twMerge(thumbClass, $$props.classThumb);
+  // Thumbnail Container
+  export let thumbDivClass = 'flex flex-row justify-center bg-gray-100';
+  let thumbDivCls = twMerge(thumbDivClass, $$props.classThumbDiv);
 
   let imageShowingIndex: number = 0;
   $: image = images[imageShowingIndex];
@@ -137,7 +140,7 @@
 {/if}
 
 {#if showThumbs}
-  <div class="flex flex-row justify-center bg-gray-100">
+  <div class={thumbDivCls}>
     {#each images as { id, imgurl, name, attribution }}
       <Thumbnail
         thumbClass={thumbCls}
