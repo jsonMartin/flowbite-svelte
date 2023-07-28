@@ -6,7 +6,9 @@ export let imgClass = '';
 </script>
 
 <div class={slideClass}>
-  <img src={image} alt={altTag} title={attr} class={imgClass} />
+  {#key image}
+    <img src={image} alt={altTag} title={attr} class={imgClass} />
+  {/key}
 </div>
 
 <!--
