@@ -35,7 +35,7 @@
   export let thumbClass: string = 'opacity-40';
   let thumbCls: string = twMerge(thumbClass, $$props.classThumb);
   // Thumbnail Container
-  export let thumbDivClass = 'flex flex-row justify-center bg-gray-100';
+  export let thumbDivClass = 'flex flex-row justify-center bg-gray-100 w-full';
   let thumbDivCls = twMerge(thumbDivClass, $$props.classThumbDiv);
 
   let imageShowingIndex: number = 0;

@@ -37,7 +37,7 @@ let imgCls = twMerge(imgClass, $$props.classImg);
 export let thumbClass = 'opacity-40';
 let thumbCls = twMerge(thumbClass, $$props.classThumb);
 // Thumbnail Container
-export let thumbDivClass = 'flex flex-row justify-center bg-gray-100';
+export let thumbDivClass = 'flex flex-row justify-center bg-gray-100 w-full';
 let thumbDivCls = twMerge(thumbDivClass, $$props.classThumbDiv);
 // have a custom transition function that returns the desired transition
 const multiple = (node, params) => {
@@ -84,9 +84,6 @@ if (loop) {
   <div class={divCls}>
     {#each images as { id, imgurl, name, attribution }}
       {#if imageShowingIndex === id}
-        <div class="bg-pink-500">
-          <h1>image goes here</h1>
-        </div>
         <div transition:multiple={transitionParams} class={transitionDivCls}>
           <Slide image={imgurl} altTag={name} attr={attribution} slideClass={slideCls} imgClass={imgCls} />
         </div>
