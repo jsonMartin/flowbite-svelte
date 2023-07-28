@@ -8,6 +8,7 @@ declare const __propDef: {
         thumbWidth?: number | undefined;
         selected?: boolean | undefined;
         thumbClass?: string | undefined;
+        thumbBtnClass?: string | undefined;
     };
     events: {
         click: MouseEvent;

@@ -15,6 +15,7 @@
     ["slideClass", "string", "'bg-purple-500'"],
     ["imgClass", "string", "'object-contain'"],
     ["thumbClass", "string", "'opacity-40'"],
-    ["thumbDivClass", "string", "'flex flex-row justify-center bg-gray-100'"]
+    ["thumbDivClass", "string", "'flex flex-row justify-center bg-gray-100 w-full'"],
+    ["thumbBtnClass", "string", "''"]
   ]
 }

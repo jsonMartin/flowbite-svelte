@@ -37,6 +37,9 @@
   // Thumbnail Container
   export let thumbDivClass = 'flex flex-row justify-center bg-gray-100 w-full';
   let thumbDivCls = twMerge(thumbDivClass, $$props.classThumbDiv);
+  // Thumbnail Img Btn Div
+  export let thumbBtnClass = '';
+  let thumbBtnCls = twMerge(thumbBtnClass, $$props.classBtnThumb);
 
   let imageShowingIndex: number = 0;
   $: image = images[imageShowingIndex];
@@ -149,6 +152,7 @@
     {#each images as { id, imgurl, name, attribution }}
       <Thumbnail
         thumbClass={thumbCls}
+        thumbBtnClass={thumbBtnCls}
         thumbImg={imgurl}
         altTag={name}
         titleLink={attribution}

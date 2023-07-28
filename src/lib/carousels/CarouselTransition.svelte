@@ -43,6 +43,9 @@
   // Thumbnail Container
   export let thumbDivClass = 'flex flex-row justify-center bg-gray-100 w-full';
   let thumbDivCls = twMerge(thumbDivClass, $$props.classThumbDiv);
+  // Thumbnail Img Btn Div
+  export let thumbBtnClass = '';
+  let thumbBtnCls = twMerge(thumbBtnClass, $$props.classBtnThumb);
 
   // have a custom transition function that returns the desired transition
   const multiple = (node: HTMLElement, params: any) => {
@@ -173,6 +176,7 @@
     {#each images as { id, imgurl, name, attribution }}
       <Thumbnail
         thumbClass={thumbCls}
+        thumbBtnClass={thumbBtnCls}
         thumbImg={imgurl}
         altTag={name}
         titleLink={attribution}

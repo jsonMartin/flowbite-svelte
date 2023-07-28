@@ -21,6 +21,7 @@ declare const __propDef: {
         imgClass?: string | undefined;
         thumbClass?: string | undefined;
         thumbDivClass?: string | undefined;
+        thumbBtnClass?: string | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;

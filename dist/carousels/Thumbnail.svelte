@@ -5,10 +5,11 @@ export let id;
 export let thumbWidth = 100;
 export let selected = false;
 export let thumbClass = '';
+export let thumbBtnClass = '';
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<button on:click aria-label="Click to view image">
+<button on:click aria-label="Click to view image" class={thumbBtnClass}>
   <img
     class={thumbClass}
     class:active={selected}
