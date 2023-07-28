@@ -25,7 +25,12 @@ let captionCls = twMerge(captionClass, $$props.classCaption);
 // Indicator
 export let indicatorClass = 'w-3 h-3 rounded-full bg-gray-100 hover:bg-gray-300 opacity-60';
 let indicatorCls = twMerge(indicatorClass, $$props.classIndicator);
-// TODO: Add slide div prop here
+// Slide
+export let slideClass = 'bg-purple-500';
+let slideCls = twMerge(slideClass, $$props.classSlide);
+// Transition Div
+export let transitionDivClass = 'bg-green-500';
+let transitionDivCls = twMerge(slideClass, $$props.classSlide);
 // have a custom transition function that returns the desired transition
 const multiple = (node, params) => {
     switch (transitionType) {
@@ -74,9 +79,9 @@ if (loop) {
         <div class="bg-pink-500">
           <h1>image goes here</h1>
         </div>
-        <!-- <div transition:multiple={transitionParams}>
-          <Slide image={imgurl} altTag={name} attr={attribution} />
-        </div> -->
+        <div transition:multiple={transitionParams} class={transitionDivCls}>
+          <Slide image={imgurl} altTag={name} attr={attribution} slideClass={slideCls} />
+        </div>
       {/if}
     {/each}
   </div>
