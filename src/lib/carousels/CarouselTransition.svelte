@@ -34,7 +34,10 @@
   let slideCls: string = twMerge(slideClass, $$props.classSlide);
   // Transition Div
   export let transitionDivClass: string = 'bg-green-500';
-  let transitionDivCls: string = twMerge(slideClass, $$props.classSlide);
+  let transitionDivCls: string = twMerge(transitionDivClass, $$props.classTransitionDiv);
+  // Img
+  export let imgClass: string = 'bg-yellow-500';
+  let imgCls: string = twMerge(imgClass, $$props.classImg);
 
   // have a custom transition function that returns the desired transition
   const multiple = (node: HTMLElement, params: any) => {
@@ -88,7 +91,7 @@
           <h1>image goes here</h1>
         </div>
         <div transition:multiple={transitionParams} class={transitionDivCls}>
-          <Slide image={imgurl} altTag={name} attr={attribution} slideClass={slideCls} />
+          <Slide image={imgurl} altTag={name} attr={attribution} slideClass={slideCls} imgClass={imgCls} />
         </div>
       {/if}
     {/each}

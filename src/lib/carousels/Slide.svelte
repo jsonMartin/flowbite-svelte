@@ -3,10 +3,11 @@
   export let altTag: string = '';
   export let attr: string = '';
   export let slideClass: string = '';
+  export let imgClass: string = '';
 </script>
 
 <div class={slideClass}>
-  <img src={image} alt={altTag} title={attr} />
+  <img src={image} alt={altTag} title={attr} class={imgClass} />
 </div>
 
 <!--

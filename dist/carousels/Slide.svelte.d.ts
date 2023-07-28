@@ -5,6 +5,7 @@ declare const __propDef: {
         altTag?: string | undefined;
         attr?: string | undefined;
         slideClass?: string | undefined;
+        imgClass?: string | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;

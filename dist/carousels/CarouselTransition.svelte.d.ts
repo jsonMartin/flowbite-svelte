@@ -19,6 +19,7 @@ declare const __propDef: {
         indicatorClass?: string | undefined;
         slideClass?: string | undefined;
         transitionDivClass?: string | undefined;
+        imgClass?: string | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;
