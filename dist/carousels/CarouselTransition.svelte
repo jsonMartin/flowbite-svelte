@@ -13,7 +13,6 @@ export let transitionType = 'fade';
 export let transitionParams = {};
 export let loop = false;
 export let duration = 2000;
-export let thumbClass = 'opacity-40';
 // Carousel
 export let divClass = 'overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96';
 let divCls = twMerge(divClass, $$props.classDiv);
@@ -32,8 +31,11 @@ let slideCls = twMerge(slideClass, $$props.classSlide);
 export let transitionDivClass = 'h-full w-full bg-green-500';
 let transitionDivCls = twMerge(transitionDivClass, $$props.classTransitionDiv);
 // Img
-export let imgClass = 'bg-yellow-500 w-full h-full object-contain';
+export let imgClass = 'object-contain';
 let imgCls = twMerge(imgClass, $$props.classImg);
+// Thumbnail
+export let thumbClass = 'opacity-40';
+let thumbCls = twMerge(thumbClass, $$props.classThumb);
 // have a custom transition function that returns the desired transition
 const multiple = (node, params) => {
     switch (transitionType) {
@@ -162,7 +164,7 @@ if (loop) {
   <div class="flex flex-row justify-center bg-gray-100">
     {#each images as { id, imgurl, name, attribution }}
       <Thumbnail
-        {thumbClass}
+        thumbClass={thumbCls}
         thumbImg={imgurl}
         altTag={name}
         titleLink={attribution}

@@ -10,13 +10,13 @@ declare const __propDef: {
         slideControls?: boolean | undefined;
         loop?: boolean | undefined;
         duration?: number | undefined;
-        thumbClass?: string | undefined;
         divClass?: string | undefined;
         indicatorDivClass?: string | undefined;
         captionClass?: string | undefined;
         indicatorClass?: string | undefined;
         slideClass?: string | undefined;
         imgClass?: string | undefined;
+        thumbClass?: string | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;

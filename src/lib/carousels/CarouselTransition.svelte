@@ -16,7 +16,6 @@
   export let transitionParams: TransitionParamTypes = {};
   export let loop: boolean = false;
   export let duration: number = 2000;
-  export let thumbClass: string = 'opacity-40';
 
   // Carousel
   export let divClass: string = 'overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96';
@@ -36,8 +35,11 @@
   export let transitionDivClass: string = 'h-full w-full bg-green-500';
   let transitionDivCls: string = twMerge(transitionDivClass, $$props.classTransitionDiv);
   // Img
-  export let imgClass: string = 'bg-yellow-500 w-full h-full object-contain';
+  export let imgClass: string = 'object-contain';
   let imgCls: string = twMerge(imgClass, $$props.classImg);
+  // Thumbnail
+  export let thumbClass: string = 'opacity-40';
+  let thumbCls: string = twMerge(thumbClass, $$props.classThumb);
 
   // have a custom transition function that returns the desired transition
   const multiple = (node: HTMLElement, params: any) => {
@@ -170,7 +172,7 @@
   <div class="flex flex-row justify-center bg-gray-100">
     {#each images as { id, imgurl, name, attribution }}
       <Thumbnail
-        {thumbClass}
+        thumbClass={thumbCls}
         thumbImg={imgurl}
         altTag={name}
         titleLink={attribution}

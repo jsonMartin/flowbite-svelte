@@ -11,7 +11,6 @@ export let images;
 export let slideControls = true;
 export let loop = false;
 export let duration = 2000;
-export let thumbClass = 'opacity-40';
 // Carousel
 export let divClass = 'overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96';
 let divCls = twMerge(divClass, $$props.classDiv);
@@ -27,8 +26,11 @@ let indicatorCls = twMerge(indicatorClass, $$props.classIndicator);
 export let slideClass = 'bg-purple-500';
 let slideCls = twMerge(slideClass, $$props.classSlide);
 // Img
-export let imgClass = 'bg-yellow-500';
+export let imgClass = 'object-contain';
 let imgCls = twMerge(imgClass, $$props.classImg);
+// Thumbnail
+export let thumbClass = 'opacity-40';
+let thumbCls = twMerge(thumbClass, $$props.classThumb);
 let imageShowingIndex = 0;
 $: image = images[imageShowingIndex];
 const nextSlide = () => {
@@ -132,7 +134,7 @@ if (loop) {
   <div class="flex flex-row justify-center bg-gray-100">
     {#each images as { id, imgurl, name, attribution }}
       <Thumbnail
-        {thumbClass}
+        thumbClass={thumbCls}
         thumbImg={imgurl}
         altTag={name}
         titleLink={attribution}
