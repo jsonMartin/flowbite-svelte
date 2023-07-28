@@ -36,7 +36,7 @@
   export let transitionDivClass: string = 'h-full w-full bg-green-500';
   let transitionDivCls: string = twMerge(transitionDivClass, $$props.classTransitionDiv);
   // Img
-  export let imgClass: string = 'bg-yellow-500';
+  export let imgClass: string = 'bg-yellow-500 w-full h-full object-contain';
   let imgCls: string = twMerge(imgClass, $$props.classImg);
 
   // have a custom transition function that returns the desired transition
