@@ -29,6 +29,8 @@
   // Indicator
   export let indicatorClass: string = 'w-3 h-3 rounded-full bg-gray-100 hover:bg-gray-300 opacity-60';
   let indicatorCls: string = twMerge(indicatorClass, $$props.classIndicator);
+  // TODO: Add slide div prop here
+
   // have a custom transition function that returns the desired transition
   const multiple = (node: HTMLElement, params: any) => {
     switch (transitionType) {
@@ -77,9 +79,12 @@
   <div class={divCls}>
     {#each images as { id, imgurl, name, attribution }}
       {#if imageShowingIndex === id}
-        <div transition:multiple={transitionParams}>
-          <Slide image={imgurl} altTag={name} attr={attribution} />
+        <div class="bg-pink-500">
+          <h1>image goes here</h1>
         </div>
+        <!-- <div transition:multiple={transitionParams}>
+          <Slide image={imgurl} altTag={name} attr={attribution} />
+        </div> -->
       {/if}
     {/each}
   </div>
