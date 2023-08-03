@@ -29,10 +29,10 @@
   export let indicatorClass: string = 'w-3 h-3 rounded-full bg-gray-100 hover:bg-gray-300 opacity-60';
   let indicatorCls: string = twMerge(indicatorClass, $$props.classIndicator);
   // Slide
-  export let slideClass: string = 'bg-purple-500';
+  export let slideClass: string = '';
   let slideCls: string = twMerge(slideClass, $$props.classSlide);
   // Transition Div
-  export let transitionDivClass: string = 'h-full w-full bg-green-500';
+  export let transitionDivClass: string = 'h-full w-full';
   let transitionDivCls: string = twMerge(transitionDivClass, $$props.classTransitionDiv);
   // Img
   export let imgClass: string = 'object-contain';

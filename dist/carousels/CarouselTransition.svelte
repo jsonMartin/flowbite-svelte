@@ -25,10 +25,10 @@ let captionCls = twMerge(captionClass, $$props.classCaption);
 export let indicatorClass = 'w-3 h-3 rounded-full bg-gray-100 hover:bg-gray-300 opacity-60';
 let indicatorCls = twMerge(indicatorClass, $$props.classIndicator);
 // Slide
-export let slideClass = 'bg-purple-500';
+export let slideClass = '';
 let slideCls = twMerge(slideClass, $$props.classSlide);
 // Transition Div
-export let transitionDivClass = 'h-full w-full bg-green-500';
+export let transitionDivClass = 'h-full w-full';
 let transitionDivCls = twMerge(transitionDivClass, $$props.classTransitionDiv);
 // Img
 export let imgClass = 'object-contain';
