@@ -29,7 +29,7 @@
   export let slideClass: string = 'flex items-center justify-center h-full w-full';
   let slideCls: string = twMerge(slideClass, $$props.classSlide);
   // Img
-  export let imgClass: string = 'object-contain';
+  export let imgClass: string = 'object-contain h-full';
   let imgCls: string = twMerge(imgClass, $$props.classImg);
   // Thumbnail
   export let thumbClass: string = 'opacity-40';

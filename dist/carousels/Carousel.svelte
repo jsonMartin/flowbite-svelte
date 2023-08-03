@@ -26,7 +26,7 @@ let indicatorCls = twMerge(indicatorClass, $$props.classIndicator);
 export let slideClass = 'flex items-center justify-center h-full w-full';
 let slideCls = twMerge(slideClass, $$props.classSlide);
 // Img
-export let imgClass = 'object-contain';
+export let imgClass = 'object-contain h-full';
 let imgCls = twMerge(imgClass, $$props.classImg);
 // Thumbnail
 export let thumbClass = 'opacity-40';
